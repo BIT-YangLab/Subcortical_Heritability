@@ -244,7 +244,7 @@ list = char(list);
 indiv_num = size(list, 1);
 base_dir_path = '../results/maps';
 
-load('./kinship_files/relative_matrix.mat');
+load('./kinship_files/kinship_hcp.mat');
 roi_file = MRIread('./masks/Atlas_ROIs.2.nii.gz');
 
 spatial_corr_mat = eye(indiv_num);

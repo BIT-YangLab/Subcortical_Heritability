@@ -2,7 +2,7 @@
 addpath('./functions/tools');
 
 % relationship
-load('./kinship_files/relative_pairs.mat');
+load('./kinship_files/SVM_relative_pairs_hcp.mat');
 load('./headers/cifti_base_info.mat')
 mask = MRIread('./masks/Atlas_ROIs.2.nii.gz');
 
@@ -84,7 +84,7 @@ addpath('./functions/tools');
 addpath('./functions/roc');
 
 % relationship
-load('./kinship_files/relative_pairs.mat');
+load('./kinship_files/SVM_relative_pairs_hcp.mat');
 load('./headers/cifti_base_info.mat')
 mask = MRIread('./masks/Atlas_ROIs.2.nii.gz');
 
@@ -211,7 +211,7 @@ addpath('./functions/tools');
 addpath('./functions/roc');
 
 % relationship
-load('./kinship_files/relative_pairs.mat');
+load('./kinship_files/SVM_relative_pairs_hcp.mat');
 load('./headers/cifti_base_info.mat')
 mask = MRIread('./masks/Atlas_ROIs.2.nii.gz');
 

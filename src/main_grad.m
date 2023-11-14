@@ -206,7 +206,7 @@ list = readlines(sublist_path);
 indiv_num = size(list, 1);
 base_dir_path = '../results/maps';
 
-load(fullfile('.', 'kinship_files', 'relative_matrix.mat'));
+load(fullfile('.', 'kinship_files', 'kinship_hcp.mat'));
 
 spatial_corr_mat = eye(indiv_num);
 val = [];
