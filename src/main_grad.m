@@ -1,4 +1,5 @@
-% Authors: Guoyuan Yang and Xinyu Wu from BIT.
+% This script provides a demo instructing how to generate functional gradients and access their heritability.
+% Author: Xinyu Wu @ BIT
 
 %% 1 - Compute cortico-subcortical similarity matrix: Using cifti data with smoothing
 addpath ./functions/tools

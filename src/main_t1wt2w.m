@@ -1,3 +1,6 @@
+% This script provides a demo instructing how to generate T1w/T2w ratio and access its heritability.
+% Author: Xinyu Wu @ BIT
+
 %% 1 - Compute group myelin
 addpath ./functions/tools/
 
