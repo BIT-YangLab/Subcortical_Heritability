@@ -1,3 +1,6 @@
+% This script provides a demo classifying twins in.
+% Author: Xinyu Wu @ BIT
+
 %% 1 - Finding best c and gamma.
 addpath('./functions/tools');
 
@@ -6,26 +9,16 @@ load('./kinship_files/SVM_relative_pairs_hcp.mat');
 load('./headers/cifti_base_info.mat')
 mask = MRIread('./masks/Atlas_ROIs.2.nii.gz');
 
-all_label = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
-subarea_label = all_label;
-
-subarea_label_ind = [];
-for i = 1 : length(subarea_label) 
-    subarea_label_ind = union(subarea_label_ind, find(cifti_base_info.brainstructure==subarea_label(i)));
-end
-subarea_label_mask = zeros(96854, 1);
-subarea_label_mask(subarea_label_ind) = 1;
-
 sublist_path = './sublist/sub_adult_hcp_herit.txt'; 
 sublist = readlines(sublist_path);
 indiv_num = size(sublist, 1);
-indiv_data = zeros(length(subarea_label_ind), indiv_num);
+indiv_data = zeros(31870, indiv_num);
 
 fprintf('Loading data...\n');
 frst = 0;
 for i = 1: indiv_num
     tmp_indiv_data = ft_read_cifti(fullfile('../results', 'maps', char(sublist(i, :)), 'Aligned_Grad1.dtseries.nii'));
-    indiv_data(:, i) = zscore(tmp_indiv_data.dtseries(subarea_label_ind, 1));
+    indiv_data(:, i) = zscore(tmp_indiv_data.dtseries(64985:96854, 1));
     show_progress(i, indiv_num, frst); frst = 1;
 end
 
@@ -88,30 +81,16 @@ load('./kinship_files/SVM_relative_pairs_hcp.mat');
 load('./headers/cifti_base_info.mat')
 mask = MRIread('./masks/Atlas_ROIs.2.nii.gz');
 
-hippocampus_label = [14, 15];
-thalamus_label = [20, 21];
-striatum_label = [8, 9, 16, 17, 18, 19];
-cerebellum_label = [10, 11];
-all_label = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
-subarea_label = all_label;
-
-subarea_label_ind = [];
-for i = 1 : length(subarea_label) 
-    subarea_label_ind = union(subarea_label_ind, find(cifti_base_info.brainstructure==subarea_label(i)));
-end
-subarea_label_mask = zeros(96854, 1);
-subarea_label_mask(subarea_label_ind) = 1;
-
 sublist_path = './sublist/sub_adult_hcp_herit.txt'; 
 sublist = readlines(sublist_path);
 indiv_num = size(sublist, 1);
-indiv_data = zeros(length(subarea_label_ind), indiv_num);
+indiv_data = zeros(31870, indiv_num);
 
 fprintf('Loading data...\n');
 frst = 0;
 for i = 1: indiv_num
     tmp_indiv_data = ft_read_cifti(fullfile('../results', 'maps', char(sublist(i, :)), 'Aligned_Grad1.dtseries.nii'));
-    indiv_data(:, i) = zscore(tmp_indiv_data.dtseries(subarea_label_ind, 1));
+    indiv_data(:, i) = zscore(tmp_indiv_data.dtseries(64985:96854, 1));
     show_progress(i, indiv_num, frst); frst = 1;
 end
 
@@ -215,30 +194,16 @@ load('./kinship_files/SVM_relative_pairs_hcp.mat');
 load('./headers/cifti_base_info.mat')
 mask = MRIread('./masks/Atlas_ROIs.2.nii.gz');
 
-hippocampus_label = [14, 15];
-thalamus_label = [20, 21];
-striatum_label = [8, 9, 16, 17, 18, 19];
-cerebellum_label = [10, 11];
-all_label = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
-subarea_label = all_label;
-
-subarea_label_ind = [];
-for i = 1 : length(subarea_label) 
-    subarea_label_ind = union(subarea_label_ind, find(cifti_base_info.brainstructure==subarea_label(i)));
-end
-subarea_label_mask = zeros(96854, 1);
-subarea_label_mask(subarea_label_ind) = 1;
-
 sublist_path = './sublist/sub_adult_hcp_herit.txt'; 
 sublist = readlines(sublist_path);
 indiv_num = size(sublist, 1);
-indiv_data = zeros(length(subarea_label_ind), indiv_num);
+indiv_data = zeros(31870, indiv_num);
 
 fprintf('Loading data...\n');
 frst = 0;
 for i = 1: indiv_num
     tmp_indiv_data = ft_read_cifti(fullfile('../results', 'maps', char(sublist(i, :)), 'Aligned_Grad1.dtseries.nii'));
-    indiv_data(:, i) = zscore(tmp_indiv_data.dtseries(subarea_label_ind, 1));
+    indiv_data(:, i) = zscore(tmp_indiv_data.dtseries(64985:96854, 1));
     show_progress(i, indiv_num, frst); frst = 1;
 end
 
