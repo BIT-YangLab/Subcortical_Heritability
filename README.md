@@ -3,6 +3,7 @@ Code of article "Heritability of functional gradients in the human subcortex"
 
 Author list: Xinyu Wu, Yu Zhang, Mufan Xue, Jinlong Li, Xuesong Li, Zaixu Cui, Jia-Hong Gao, Guoyuan Yang
 
+Contact: bit_arims_xinyuwu@bit.edu.cn/x.w.wdveloce@gmail.com (Xinyu Wu), yanggy@bit.edu.cn (Guoyuan Yang)
 
 ## Dependencies
 
@@ -13,7 +14,7 @@ SUIT: https://github.com/jdiedrichsen/suit,<br/>
 LIBSVM: https://github.com/cjlin1/libsvm,<br/>
 plot_fig_subcortex: https://github.com/wd-veloce/plot_fig_subcortex,<br/>
 
-## Project descriptions
+## Code descriptions
 
 ```
 └─ src
@@ -43,7 +44,3 @@ plot_fig_subcortex: https://github.com/wd-veloce/plot_fig_subcortex,<br/>
     │          show_progress.m: Showing progress in for-loop.
     │
  ```
-
-## More
-
-It is only a draft at present. More details would be publicly available in the future.
